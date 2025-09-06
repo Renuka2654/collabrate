@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Order Form</title>
+</head>
+<body>
+    <h1>Place Your Grocery Order</h1>
+    <form action="/submit-order" method="POST">
+        <fieldset>
+            <legend>Customer Information</legend>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="customer_name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="customer_email" required><br><br>
+            <label for="address">Delivery Address:</label><br>
+            <textarea id="address" name="delivery_address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select Groceries</legend>
+            <div>
+                <input type="checkbox" id="apples" name="item" value="apples">
+                <label for="apples">Apples (1kg)</label><br>
+                <input type="checkbox" id="milk" name="item" value="milk">
+                <label for="milk">Milk (1L)</label><br>
+                <input type="checkbox" id="bread" name="item" value="bread">
+                <label for="bread">Bread (Loaf)</label><br>
+                <input type="checkbox" id="eggs" name="item" value="eggs">
+                <label for="eggs">Eggs (1 Dozen)</label><br>
+            </div>
+            <br>
+            <label for="other_items">Other Items (specify quantity):</label><br>
+            <textarea id="other_items" name="other_items" rows="3" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Delivery Options</legend>
+            <label for="delivery_date">Preferred Delivery Date:</label><br>
+            <input type="date" id="delivery_date" name="delivery_date"><br><br>
+            <label for="delivery_time">Preferred Delivery Time Slot:</label><br>
+            <select id="delivery_time" name="delivery_time">
+                <option value="any">Any Time</option>
+                <option value="morning">Morning (9 AM - 12 PM)</option>
+                <option value="afternoon">Afternoon (1 PM - 5 PM)</option>
+                <option value="evening">Evening (6 PM - 9 PM)</option>
+            </select><br><br>
+        </fieldset>
+
+        <input type="submit" value="Place Order">
+    </form>
+</body>
+</html>
